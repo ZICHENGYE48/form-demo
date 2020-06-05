@@ -1,0 +1,99 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap');
+
+
+:root{
+    --success-color:green;
+    --failure-color:red;
+}
+
+*{
+    box-sizing:border-box;
+    font-family: 'Open Sans', sans-serif;
+  }
+  body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }
+
+h2{
+    text-align: center;
+    margin: 0 0 20px;
+}
+  .container{
+    border:1px solid black;
+    width: 400px;
+    margin: auto;
+  }
+  
+  .input--correct{
+    border:1px solid green;
+  }
+  
+  .input--incorrect{
+    border:1px solid red;
+  } 
+
+
+  button{
+      background-color: #3498db;
+        width: 100%; 
+        cursor: pointer;
+        border-radius: 4px;
+        color: white;
+        display: block;
+        font-size: 16px;
+        padding: 10px;
+        margin-top: 20px;
+
+  }
+
+form{
+    padding: 20px;
+}
+
+.control{
+    padding-bottom: 20px;
+    margin-bottom: 10px;
+    position: relative;
+}
+
+.control label{
+    padding-bottom: 5px;
+    display: block;
+}
+
+.control input{
+    display: block;
+    width: 100%;
+    padding: 10px;
+    border-radius: 4px;
+    border: 2px solid #f0f0f0;
+    font-size: 14px;
+}
+
+input:focus{
+    outline:0;
+    border-color:black;
+  }
+
+.control.success input{
+    border-color: var(--success-color);
+}
+
+.control.failure input{
+    border-color: var(--failure-color);
+}
+
+.control small{
+    position: absolute; 
+    color: var(--failure-color);
+    bottom: 0;
+    left: 0;
+    visibility: hidden;
+  }
+
+.control.failure small {
+    visibility: visible;
+}
